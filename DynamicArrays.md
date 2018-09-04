@@ -38,3 +38,17 @@ end
 - #shift, #unshift: still need to shift everything when elements move -> O(n)
 
 ## Ring Buffer
+```rb
+class RingBuffer
+  def initialize
+    @length = 0
+    @capacity = 8
+    @start_idx = 0
+    @store = StaticArray.new(@capacity)
+  end
+  # ...
+```
+
+<img src="ringbuffer.png" width=500 >
+- ring buffer: so all methods are at least O(1) amortized!
+- #unshift: place at the end and change start_idx -> O(n)
