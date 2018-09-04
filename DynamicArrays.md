@@ -14,9 +14,27 @@ class StaticArray
 end
 ```
 
-- #find: arithmetic and lookup at a specific memory location are constant time -> O(1)
+- #[](val) and #[]=(val): arithmetic, lookup at a specific memory location, and assignment are constant time -> O(1)
 - #push: arithmetic and the assignment are constant time -> O(1)
 - #delete: shifts elements over after deletion -> O(n)
   - O(n/2) average and O(n - 1) worst case
 
 ## Dynamic Arrays
+```rb
+class DynamicArray
+  def initialize
+    @length = 0
+    @capacity = 8
+    @store = StaticArray.new(@capacity)
+  end
+  # ...
+end
+```
+
+- Dynamic array: dynamically changes capacity (doubles when length == capacity)
+- #find: O(n), #delete: O(n)
+- #push: O(n) time, but O(1) amortized time
+- #pop: O(1)
+- #shift, #unshift: still need to shift everything when elements move -> O(n)
+
+## Ring Buffer
