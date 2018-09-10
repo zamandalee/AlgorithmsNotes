@@ -22,3 +22,7 @@ How do you deploy your application to cloud such that it doesn't crash while ser
 - Fixes:
   - Vertical scaling: pay to improve computing power of current machine
   - Horizontal scaling: add more servers to handle more requests
+
+- Hard disk: used to be very slow, was a rotating physical device like a record player/cassette
+- RAM: created to speed things up, circuit using electric signal communication, but wasn't persistent
+- Solid state: hybrid of the two, circuit, persists, but not has fast as RAM
