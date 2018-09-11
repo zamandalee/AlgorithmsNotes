@@ -37,10 +37,18 @@ Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it
   - Writes data to disk and RAM -> persistent
     - Extra work, but usually much more read requests than writes
 
-### Scaling Out: App Machine
+### Scaling Out: App Machine & Database
 - 2 options: scale out work of 1. App or 2. Database
-  - 1. easier...
+  - 1. easier
+
+Multiple App Machines
 - Rent more AWS machines (collectively the **application tier**), one solely for the database, one is Load Balancer
   - User -> DNS -> IP, HTTP request -> load balancer -> app -> backend -> back
 - **Load balancer**: doesn't respond to user request, configured to copy headers of HTTP request and pass to machines w/ app -> later copies response back to user
   - Failover: if one of app machines crash, load balancer doesn't promptly receive response -> excludes that machine from work distribution
+
+Multiple Databases
+- More databases (collectively the **database tier**), one is "leader," rest are "followers"
+  - All rails apps must send write requests to leader db -> leader copies new data over to followers
+  - Read requests to any db (disadvantage: followers may not have updated writes)
+  - Multiple leaders: no advantage, bc 2+ leaders still need to transfer write info to each other, conflicts can occur

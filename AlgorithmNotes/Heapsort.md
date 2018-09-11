@@ -16,7 +16,6 @@
 
 - #peek: returns min element in heap, O(1)
   - Alw root node
-  - sdfa
 
 - #insert(el): inserts according to priority, < O(n)
   - Add to end, swap with parent until heap property obeyed (sift/heapify up) -> O(logn)
