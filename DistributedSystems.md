@@ -39,7 +39,7 @@ Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it
 
 ### Scaling Out: App Machine & Database
 - 2 options: scale out work of 1. App or 2. Database
-  - 1. easier
+  - 1 is easier
 
 Multiple App Machines
 - Rent more AWS machines (collectively the **application tier**), one solely for the database, one is Load Balancer
@@ -50,5 +50,18 @@ Multiple App Machines
 Multiple Databases
 - More databases (collectively the **database tier**), one is "leader," rest are "followers"
   - All rails apps must send write requests to leader db -> leader copies new data over to followers
+    - Synchronous replication: copies data to followers after each new write
+    - Asynchronous replication: batch processing, better performance
   - Read requests to any db (disadvantage: followers may not have updated writes)
   - Multiple leaders: no advantage, bc 2+ leaders still need to transfer write info to each other, conflicts can occur
+- Promotion: if leader fails, one follower promoted
+
+
+- **Sharding/partitioning**: each obj is entirely handled by 1 machine determined by cat_id % num_databases
+  - Ex.: cat_24 % 6 -> Shard4
+  - If Shard4 fails, there can be follower of Shard4 to act as backup
+  - Not a good scheme: resizing is awful
+- **Denormalize**: don't normalize (ex.: hold reference to cat in friends table with cat_id), instead have copies of info in diff locations, bc joins queries are now not good
+  - Ex.: ask for all friends of one cat, improve scalability by having all data in one place
+    - Curie's friend Breakfast's data in Shard4 where Curie is, even though Breakfast is in Shard6
+  - Tradeoffs: copying -> more storage, updating complicated (but improvements to read > detriment to write)
