@@ -12,3 +12,12 @@
   - O(logn): O(depth)
 - ```#insert(val)```: traverse down tree to find simplest spot for insertion
   - O(logn): O(depth)
+- ```#delete(val)```: val's replacement must be 1. > root 2. > left subtree 3. < right subtree
+  - Hibbard Deletion: replace w max (right as far as possible) of left subtree -> left children + that subtree of max replaces that max after it's moved
+
+## Balanced BST
+- Balanced BST: diff in depth of left and right is <= 1 && left and right are balanced BSTs
+-
+
+
+Great resource: [a/A BST reading](https://github.com/appacademy/sf-job-search-curriculum/blob/master/algorithms/binary_search_trees/bst_reading.md)
