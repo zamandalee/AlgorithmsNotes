@@ -1,10 +1,5 @@
 # RUBY CONCEPTS/TRIVIA
 
-## React vs. Redux
-<img src="ReduxCyclewRails.png" width=550/>
-- Redux: yellow, the store, the single-source of truth
-- React: green
-
 ## Ruby vs. Rails
 - Ruby: OOP interpreted programming language dev by Yukihiro Matsumoto
 - Rails: web-application framework written with Ruby
