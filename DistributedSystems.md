@@ -1,7 +1,7 @@
 # Distributed Systems
 Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it doesn't crash while serving a large user base?
 
-## Application Process
+## App Process
 - **Amazon EC2**: rent computers in Amazon data center
   - Heroku does this for you
   - Can run make apps, run servers (ex.: instead of localhost3000, [username]3000), etc. remotely on this computer
