@@ -73,7 +73,9 @@ end
   App.cable = ActionCable.createConsumer();
 }).call(this);
 ```
+<br/>
 
+- **Subscriber**
 ```js
 // allow users to subscribe
 // Leeway/app/assets/javascripts/channels/messages.js.erb
@@ -91,4 +93,51 @@ end
       {received: (data) => data}
     );
 <% end %>
+```
+
+### Client-Server Interactions
+- **Streams**: how channels route broadcasts to subscribers
+```rb
+# Leeway/app/channels/messages_channel.rb
+class MessagesChannel < ApplicationCable::Channel
+  def subscribed
+    stream_from "chat-#{params['messageable_id']}:messages"
+  end
+end
+```
+<br/>
+
+- **Broadcasting**: online queue, pub/sub link where transmissions routed to subscribers who are streaming
+```rb
+# Leeway/app/models/messages.rb
+after_create_commit do
+  ActionCable.server.broadcast "chat-#{messageable_id}:messages",
+    id: id,
+    body: body,
+    author_id: author_id,
+    author: author.format_username,
+    messageable_type: messageable_type,
+    timestamp: created_at.strftime("%-I:%M %p")
+end
+```
+
+- **Subscriptions**
+```js
+createSocket(channelId) {
+  let cable;
+  if (process.env.NODE_ENV !== 'production') {
+    cable = Cable.createConsumer('http://localhost:3000/cable');
+  } else {
+    cable = Cable.createConsumer('wss://leewayapp.herokuapp.com/cable');
+  }
+  this.chats = cable.subscriptions.create({
+    channel: "MessagesChannel",
+    messageable_id: channelId //this will be sent to messages_channel's params
+  }, {
+    received: (data) => { //data passed from js/channels/messages.js.erb
+      data.messageable_id = channelId;
+      this.props.receiveMessage(data);
+    }
+  });
+}
 ```
