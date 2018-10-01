@@ -35,6 +35,16 @@
   - -: depends on shared state, behaviors accessed by multiple functions, can cause **race conditions**
   - Ex.: Ruby, Java, C#, C++
 
+
+## Object Composition > Class Inheritance
+- **Inheritance**: design based on what they are
+  - Need to work out the taxonomy in advance, prone to design mistakes
+- **Composition**: design based on what they do
+  - ```Object.assign({}, ...)```
+- Use can-do, has-a, or uses-a relationships instead of is-a relationships
+  - Avoids class hierarchies, brittle base class problem, coupling
+
+
 ## Sources
 Compiled vs Interpreted
 https://kb.iu.edu/d/agsz
