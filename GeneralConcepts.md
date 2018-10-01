@@ -44,6 +44,18 @@
 - Use can-do, has-a, or uses-a relationships instead of is-a relationships
   - Avoids class hierarchies, brittle base class problem, coupling
 
+## Two-Way Data Binding vs. One-Way Data Flow
+- **Two-way data binding**: UI fields are bound to model data --> changes in either will change the other
+- **One-way data flow**: model is single source of truth, ex.: React
+
+## Monolithic vs. Microservice Architecture
+- **Monolithic architecture**: app is a cohesive unit, components designed to work together, share memory
+  - +: shared-memory access fast, cross-cutting concerns (logging, rate limiting, security) all hooked up
+  - -: coupling --> difficult to scale and maintain, side-effects
+- **Microservice architecture**: app consists of smaller, independent apps, run in own memory space and scale independently
+  - +: organization, easy to scale
+  - -: cross-cutting concerns difficult to collectively address
+
 
 ## Sources
 Compiled vs Interpreted
