@@ -6,9 +6,11 @@
 - Closures
 - Async
 
-Overview
-- Interpreted language:
-  - Compiled: converts to assembly language (depending on machine) --> binary code --> 
+### Overview
+- Interpreted
 - Prototype-based: style of OOP, classes not explicitly defined, instead objects are reused
-- Multi-paradigm:
-- Functional programming:
+- Multi-paradigm
+  - Imperative/procedural programming (explicit statements that change program state), OOP, functional programming (functions to avoid global state)
+
+### Asynchronous
+- Asynchronous: engine runs in an event loop --> single program thread can handle concurrent operations
