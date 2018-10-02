@@ -1,19 +1,62 @@
 # JavaScript
-- Strict mode
-- Difference between a function expression and a function declaration
 - Utility of IIFEs
 - Prototypical inheritance
 - Closures
 - Async
 
-### Overview
+## Overview
 - **Interpreted**
 - **Prototype-based**: style of OOP, classes not explicitly defined, instead objects are reused
 - **Multi-paradigm**
   - **Imperative/procedural programming** (explicit statements that change program state), **OOP**, **functional programming** (functions to avoid global state)
 
-### Asynchronous
+## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
+
+## Function Expression vs. Declaration
+- **Function declaration**: defines a named function variable wo assignment, like sibling of variable declaration (function instead of const)
+  ```js
+  function bar() {
+    return 3;
+  }
+  ```
+- **Function expression**: preferred, defines named or anonymous function as part of a larger expression syntax (variable assignment)
+  ```js
+  // anonymous
+  var a = function() {
+    return 3;
+  }
+  ```
+- Difference: expression not visible outside its scope
+  - Hoisting
+    ```js
+    // function declaration alw hoisted
+    function foo(){
+      function bar() {
+        return 3;
+      }
+      return bar();
+      function bar() {
+        return 8;
+      }
+    }
+    alert(foo()); //8
+    ```
+    ```js
+    // variable declarations are hoisted, but assignment expressions don't
+    function foo(){
+        var bar = function() {
+            return 3;
+        };
+        return bar();
+        // when bar below is hoisted, its var bar = undefined
+        var bar = function() {
+            return 8;
+        };
+    }
+    alert(foo());
+    ```
+
 
 ## Strict Mode
 ES5, intentionally has diff semantics from normal code
@@ -53,5 +96,5 @@ Changes:
 
 - Makes ```eval``` and ```arguments``` simpler
 
-### Sources:
+## Sources:
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
