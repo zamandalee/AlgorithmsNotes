@@ -9,6 +9,7 @@
 - **Prototype-based**: style of OOP, classes not explicitly defined, instead objects are reused
 - **Multi-paradigm**
   - **Imperative/procedural programming** (explicit statements that change program state), **OOP**, **functional programming** (functions to avoid global state)
+- **Weakly typed**:
 
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
@@ -96,5 +97,45 @@ Changes:
 
 - Makes ```eval``` and ```arguments``` simpler
 
+## Immediately-Invoked Function Expression (IIFE, 'iffy')
+- IIFE: variables declared inside IIFE not visible outside
+- Several stylistic variations
+  1. ```!```, ```+```, ```-```, ```~```, or ```void``` signals treatment of code afterward as an expression
+    - If no need to reuse the function's return value
+    ```js
+    !function() {
+        alert("Hello from IIFE!");
+    }();
+    // Shows the alert "Hello from IIFE!"
+    ```
+  2. Turn into expression in another way and invoke
+    ```js
+    // Variation 1
+    (function() {
+        alert("I am an IIFE!");
+    }());
+
+    // Variation 2
+    (function() {
+        alert("I am an IIFE, too!");
+    })();
+    ```
+- Uses
+  1. Prevent polluting global environment: make variable block scope, if you can't use let and const (not ES5 supported)
+  2. Avoid variable hoisting wi blocks
+  3. Allow public access to methods while retaining privacy for variables in that func
+  4. Aliasing variables: resolve two global naming conflicts
+    ```js
+    window.$ = function somethingElse() {
+        // ...
+    };
+
+    (function($) {
+        // ...
+    })(jQuery);
+    ```
+  5. Capturing global object
+
 ## Sources:
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+IIFE's: https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6, https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes, https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
