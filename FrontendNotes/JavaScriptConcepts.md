@@ -1,5 +1,4 @@
 # JavaScript
-- Utility of IIFEs
 - Prototypical inheritance
 - Closures
 - Async
@@ -135,6 +134,19 @@ Changes:
     })(jQuery);
     ```
   5. Capturing global object
+
+## ECMAScript Versions
+ES5
+- Strict mode
+- Methods
+  - String.trim()
+  - Array.isArray()
+  - Array.forEach(), Array.map(), Array.filter(), Array.reduce()
+  - Array.every(), Array.some()
+  - Array.indexOf(), Array.lastIndexOf()
+  - JSON.parse() receives data from server, JSON.stringify() sends data
+  - Date.now()
+- Trailing commas in array and objects
 
 ## Sources:
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode

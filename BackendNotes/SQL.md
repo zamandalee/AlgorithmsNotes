@@ -63,3 +63,6 @@ DELETE FROM
 WHERE
   (name = 'Eddard Stark' AND house = 'Winterfell');
 ```
+
+Great Sources:
+https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/

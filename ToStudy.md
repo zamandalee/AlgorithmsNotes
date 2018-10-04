@@ -2,7 +2,7 @@ Topics from Medium Post:
 Javascript
 - ~~Strict mode~~
 - ~~Difference between a function expression and a function declaration~~
-- Utility of IIFEs
+- ~~Utility of IIFEs~~
 - Prototypical inheritance
 - Closures
 
