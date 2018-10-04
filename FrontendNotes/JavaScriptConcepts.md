@@ -139,14 +139,22 @@ Changes:
 ES5
 - Strict mode
 - Methods
-  - String.trim()
-  - Array.isArray()
-  - Array.forEach(), Array.map(), Array.filter(), Array.reduce()
-  - Array.every(), Array.some()
-  - Array.indexOf(), Array.lastIndexOf()
-  - JSON.parse() receives data from server, JSON.stringify() sends data
-  - Date.now()
+  - ```String.trim()```
+  - ```Array.isArray()```
+  - ```Array.forEach()```, ```Array.map()```, ```Array.filter()```, ```Array.reduce()```
+  - ```Array.every()```, ```Array.some()```
+  - ```Array.indexOf()```, ```Array.lastIndexOf()```
+  - ```JSON.parse()``` receives data from server, ```JSON.stringify()``` sends data
+  - ```Date.now()```
 - Trailing commas in array and objects
+
+ES6
+- ```let```, ```const```: block scoped, can't be re-declared in same scope, hoisted but not initialized (```ReferenceError``` if variable tried to use before declaration)
+- ```let```: can be updated
+- ```const```: can't be updated, must be initialized during declaration
+  - Old pre-ES6 ```var```: globally/function scoped (defined outside func, globally), can be udpated and re-declared, hoisted and initialized as ```undefined```,
+- Default parameter values
+- Array.find(), Array.findIndex()
 
 ## Sources:
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
