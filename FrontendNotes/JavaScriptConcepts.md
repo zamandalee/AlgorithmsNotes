@@ -13,7 +13,7 @@
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
 
-## Function Expression vs. Declaration
+## Function Expression vs Declaration
 - **Function declaration**: defines a named function variable wo assignment, like sibling of variable declaration (function instead of const)
   ```js
   function bar() {
@@ -96,8 +96,8 @@ Changes:
 
 - Makes ```eval``` and ```arguments``` simpler
 
-## Immediately-Invoked Function Expression (IIFE, 'iffy')
-- IIFE: variables declared inside IIFE not visible outside
+## IIFE
+- Immediately-Invoked Function Expression: 'iffy,' variables declared inside IIFE not visible outside
 - Several stylistic variations
   1. ```!```, ```+```, ```-```, ```~```, or ```void``` signals treatment of code afterward as an expression
     - If no need to reuse the function's return value
@@ -150,12 +150,42 @@ ES5
 
 ES6
 - ```let```, ```const```: block scoped, can't be re-declared in same scope, hoisted but not initialized (```ReferenceError``` if variable tried to use before declaration)
-- ```let```: can be updated
-- ```const```: can't be updated, must be initialized during declaration
-  - Old pre-ES6 ```var```: globally/function scoped (defined outside func, globally), can be udpated and re-declared, hoisted and initialized as ```undefined```,
-- Default parameter values
-- Array.find(), Array.findIndex()
+  - ```let```: can be updated
+  - ```const```: can't be updated, must be initialized during declaration
+  - Old pre-ES6 ```var```: globally/function scoped (defined outside func, globally), can be updated and re-declared, hoisted and initialized as ```undefined```,
+
+- Arrow function syntax: () => ..., retains external ```this``` inside block
+
+- Promises: library for async,
+  ```js
+  function timeout(duration = 0) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, duration);
+    })
+  }
+
+  const p = timeout(1000)
+    .then( res => console.log(res); )
+    .catch( err => throw new Error(err); )
+  ```
+
+- Classes: ```class ListItem extends React.Component {...}```
+
+- Template strings/string interpolation: ````${variable here}````
+
+- Parameter values
+  - Default: ```function foo(x, y = 12)```
+  - Rest operator: ```function foo(...args)```, turns individual args to an array
+  - Spread operator: ```function foo(x, y, z) {...} foo(...[x, y, z])```, turns arr to individual
+
+- Unicode
+- Modules
+- Map, Set, WeakMap, WeakSet
+- Symbols
+- ```Array.find()```, ```Array.findIndex()``` take callbacks
 
 ## Sources:
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 IIFE's: https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6, https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes, https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
+ES5: https://www.w3schools.com/js/js_es5.asp
+ES6: https://github.com/lukehoban/es6features

@@ -7,7 +7,7 @@ Javascript
 - Closures
 
 More JS:
-- ES6 v ES5: https://github.com/lukehoban/es6features
+- ~~ES6 v ES5: https://github.com/lukehoban/es6features~~
 - JS Trivia: https://www.toptal.com/javascript/interview-questions, https://github.com/BCrawfordScott/Coding_Exercises/blob/master/Technical-Trivia/TriviaChallenge.md
 - Promises
 - React lifecycle methods: https://blog.cloudboost.io/handling-time-component-lifecycle-methods-in-react-7c6d8f1c2281
