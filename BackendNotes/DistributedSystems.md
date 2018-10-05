@@ -66,3 +66,10 @@ Multiple Databases
     - Curie's friend Breakfast's data in Shard4 where Curie is, even though Breakfast is in Shard6
   - Tradeoffs: copying -> more storage, updating complicated (but improvements to read > detriment to write)
     - Thus, use for when reads >> writes
+
+# ACID Database
+- Properties
+  - Transactions and atomicity
+    - Transaction: 
+  - Consistency: db constraints enforced (not null, uniqueness, all ensured)
+  - Durability: saved data never lost
