@@ -6,11 +6,11 @@
 
 <p align="center">
   <a href="#overview">Overview</a> •
-  <a href="#Asynchronous">Asynchronous</a> •
-  <a href="#Function-Expression-vs-Declaration">Func Expression vs Declaration</a> •
-  <a href="#Strict-Mode">Strict Mode</a> •
-  <a href="#IIFE">IIFE</a> • 
-  <a href="#ECMAScript-Versions">ECMAScript Versions</a>
+  <a href="#asynchronous">Asynchronous</a> •
+  <a href="#function-expression-vs-declaration">Func Expression vs Declaration</a> •
+  <a href="#strict-mode">Strict Mode</a> •
+  <a href="#iife">IIFE</a> •
+  <a href="#ecmacript-versions">ECMAScript Versions</a>
 </p>
 
 ## Overview
