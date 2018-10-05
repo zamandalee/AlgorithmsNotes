@@ -1,7 +1,7 @@
 # Distributed Systems
 Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it doesn't crash while serving a large user base?
 
-## App Process
+## Web Application Process
 - **Amazon EC2**: rent computers in Amazon data center
   - Heroku does this for you
   - Can run make apps, run servers (ex.: instead of localhost3000, [username]3000), etc. remotely on this computer
@@ -60,8 +60,9 @@ Multiple Databases
 - **Sharding/partitioning**: each obj is entirely handled by 1 machine determined by cat_id % num_databases, no need for inter-machine communication
   - Ex.: cat_24 % 6 -> Shard4
   - If Shard4 fails, there can be follower of Shard4 to act as backup
-  - Not a good scheme: resizing is awful
+  - Con's: JOIN queries require interaction with many machines (solve by denormalizing data), resizing is awful
 - **Denormalize**: don't normalize (ex.: hold reference to cat in friends table with cat_id), instead have copies of info in diff locations, bc joins queries are now not good
   - Ex.: ask for all friends of one cat, improve scalability by having all data in one place
     - Curie's friend Breakfast's data in Shard4 where Curie is, even though Breakfast is in Shard6
   - Tradeoffs: copying -> more storage, updating complicated (but improvements to read > detriment to write)
+    - Thus, use for when reads >> writes

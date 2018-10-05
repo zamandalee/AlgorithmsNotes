@@ -33,7 +33,12 @@
   - ``` let f = function() { this.a = 1; this.b = 2 }```
   - ```f.prototype.b = 3``` good, ```f.prototype = {b:3,c:4}``` will break the prototype chai
   - ```f```'s prototype is Object.prototype, Object's is null
-
+- JS ```class TodoListItem extends React.Component``` is syntactic sugar that builds on prototypal inheritance
+- Better than class inheritance, bc class inheritance has more flaws:
+  - Tight coupling
+  - Fragile base class: widespread use of base class --> difficult to fix
+  - Duplication by necessity: inflexible hierarchies often force duplication
+  - Gorilla/banana problem: wanted a banana, but got a banana held by a gorilla in the entire jungle
 
 ## Function Expression vs Declaration
 - **Function declaration**: defines a named function variable wo assignment, like sibling of variable declaration (function instead of const)
