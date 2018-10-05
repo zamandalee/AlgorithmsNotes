@@ -1,7 +1,17 @@
-# JavaScript
+<p align="center>JavaScript</p>
+
 - Prototypical inheritance
 - Closures
 - Async
+
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#Asynchronous">Asynchronous</a> •
+  <a href="#Function-Expression-vs-Declaration">Func Expression vs Declaration</a> •
+  <a href="#Strict-Mode">Strict Mode</a> •
+  <a href="#IIFE">IIFE</a> • 
+  <a href="#ECMAScript-Versions">ECMAScript Versions</a>
+</p>
 
 ## Overview
 - **Interpreted**: language --> ready to run --> virtual machine interprets --> machine code
