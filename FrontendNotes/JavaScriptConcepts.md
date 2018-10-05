@@ -7,10 +7,11 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#asynchronous">Asynchronous</a> •
+  <a href="#prototypal-inheritance">Prototypal Inheritance</a> •
   <a href="#function-expression-vs-declaration">Func Expression vs Declaration</a> •
   <a href="#strict-mode">Strict Mode</a> •
   <a href="#iife">IIFE</a> •
-  <a href="#ecmacript-versions">ECMAScript Versions</a>
+  <a href="#ecmascript-versions">ECMAScript Versions</a>
 </p>
 
 ## Overview
@@ -25,6 +26,14 @@
 
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
+
+## Prototypal Inheritance
+- Object has private property w link to **prototype** (another obj)
+- When accessing property of an obj, obj itself is looked at, then its prototype, all the way up **prototype chain**, until null or property found
+  - ``` let f = function() { this.a = 1; this.b = 2 }```
+  - ```f.prototype.b = 3``` good, ```f.prototype = {b:3,c:4}``` will break the prototype chai
+  - ```f```'s prototype is Object.prototype, Object's is null
+
 
 ## Function Expression vs Declaration
 - **Function declaration**: defines a named function variable wo assignment, like sibling of variable declaration (function instead of const)

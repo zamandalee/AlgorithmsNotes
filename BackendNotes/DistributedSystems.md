@@ -24,7 +24,7 @@ Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it
   - **Horizontal scaling**: add more servers to handle more requests
 
 
-### Database: RAM and Disk (Scaling Up)
+### Scaling Up: Database (RAM and Disk)
 - **Hard disk**: used to be very slow, was a rotating physical device like a record player/cassette
 - **RAM**: created to speed things up, circuit using electric signal communication, but wasn't persistent
 - **Solid state**: hybrid of the two, circuit, persists, but not has fast as RAM
@@ -50,14 +50,14 @@ Multiple App Machines
 Multiple Databases
 - More databases (collectively the **database tier**), one is "leader," rest are "followers"
   - All rails apps must send write requests to leader db -> leader copies new data over to followers
-    - Synchronous replication: copies data to followers after each new write
-    - Asynchronous replication: batch processing, better performance
+    - **Synchronous replication**: copies data to followers after each new write
+    - **Asynchronous replication**: batch processing, better performance (less taxing, one big job at a time is preferred by computers, can decide ordering to be efficient)
   - Read requests to any db (disadvantage: followers may not have updated writes)
   - Multiple leaders: no advantage, bc 2+ leaders still need to transfer write info to each other, conflicts can occur
 - Promotion: if leader fails, one follower promoted
 
 
-- **Sharding/partitioning**: each obj is entirely handled by 1 machine determined by cat_id % num_databases
+- **Sharding/partitioning**: each obj is entirely handled by 1 machine determined by cat_id % num_databases, no need for inter-machine communication
   - Ex.: cat_24 % 6 -> Shard4
   - If Shard4 fails, there can be follower of Shard4 to act as backup
   - Not a good scheme: resizing is awful
