@@ -4,11 +4,14 @@
 - Async
 
 ## Overview
-- **Interpreted**
+- **Interpreted**: language --> ready to run --> virtual machine interprets --> machine code
 - **Prototype-based**: style of OOP, classes not explicitly defined, instead objects are reused
 - **Multi-paradigm**
   - **Imperative/procedural programming** (explicit statements that change program state), **OOP**, **functional programming** (functions to avoid global state)
 - **Weakly typed**:
+- **Lexical scope**: scope is defined by author-time decisions of where functions are declared
+  - **Lexing phase**: during compilation, know the where and how of declarations, able to predict how they'll be looked up during execution
+
 
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
@@ -43,7 +46,7 @@
     alert(foo()); //8
     ```
     ```js
-    // variable declarations are hoisted, but assignment expressions don't
+    // variable declarations are hoisted, but assignment expressions aren't
     function foo(){
         var bar = function() {
             return 3;
@@ -54,9 +57,8 @@
             return 8;
         };
     }
-    alert(foo());
+    alert(foo()); //3
     ```
-
 
 ## Strict Mode
 ES5, intentionally has diff semantics from normal code
@@ -185,6 +187,7 @@ ES6
 - ```Array.find()```, ```Array.findIndex()``` take callbacks
 
 ## Sources:
+Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 IIFE's: https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6, https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes, https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
 ES5: https://www.w3schools.com/js/js_es5.asp
