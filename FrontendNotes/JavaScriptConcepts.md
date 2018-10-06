@@ -44,7 +44,16 @@
     }
   } );
   ```
-
+- Chaining: alw return results, so subsequent cbs can catch it
+  - .then(): 2 args, cbs for success and failure cases
+    ```js
+    promise.then( (result) => {
+      console.log(result); // "Stuff worked!"
+    }, (err) => {
+      console.log(err); // Error: "It broke"
+    });
+    ```
+  - ```.catch( (err) => failureCallback )```: short for ```.then( (null, failureCallback) => {...} )```
 
 ## Prototypal Inheritance
 - Object has private property w link to **prototype** (another obj)
