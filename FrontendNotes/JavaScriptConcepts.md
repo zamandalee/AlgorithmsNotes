@@ -1,6 +1,4 @@
 <p align="center>JavaScript</p>
-
-- Prototypical inheritance
 - Closures
 - Async
 
@@ -26,6 +24,27 @@
 
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
+
+## Promise
+- **Promise**: POJO that represents the eventual completion or failure of an sync func
+- Possible states:
+  - Settled: can't transition into any other state, alw has value (can be undefined)
+    - Fulfilled: promise's action succeeded
+    - Rejected: promise's action failed
+  - Pending
+- Creation: 1 arg is a cb w ```resolve``` and ```reject``` params
+  ```js
+  const promise = new Promise( (resolve, reject) => {
+    // do a thing, possibly async, then…
+    if (/* everything turned out fine */) {
+      resolve("Stuff worked!");
+    }
+    else {
+      reject(Error("It broke"));
+    }
+  } );
+  ```
+
 
 ## Prototypal Inheritance
 - Object has private property w link to **prototype** (another obj)
@@ -218,6 +237,7 @@ ES6
 - ```Array.find()```, ```Array.findIndex()``` take callbacks
 
 ## Sources:
+Promises: https://developers.google.com/web/fundamentals/primers/promises
 Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures
 Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 IIFE's: https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6, https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes, https://en.wikipedia.org/wiki/Immediately-invoked_function_expression

@@ -68,8 +68,12 @@ Multiple Databases
     - Thus, use for when reads >> writes
 
 # ACID Database
-- Properties
-  - Transactions and atomicity
-    - Transaction: 
-  - Consistency: db constraints enforced (not null, uniqueness, all ensured)
-  - Durability: saved data never lost
+- A, C, I, D properties:
+  - **Atomicity** and transactions
+    - **Transaction**: SQL query either completes fully, or rollbacks
+  - **Consistency**: db constraints enforced (not null, uniqueness, all ensured)
+  - **Isolation**: two transactions that don't conflict can be done in parallel, but two that do conflict
+    - Ways to achieve
+      - **Serial execution**: transactions alw processed one at a time, slow
+      - **Parallel execution**: ideal, must understand when there are conflicts
+  - **Durability**: saved data never lost

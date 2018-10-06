@@ -5,26 +5,25 @@
 
 - In theory, languages can be either
 
-- Interpreted language: interpreter parses and executes commands
+- **Interpreted language**: interpreter parses and executes commands
   - +: portable, easier to debug
   - -: slow
     - Parsed, interpreted, and executed every time
   - Ex.: JS, Ruby, PHP, Python
 
 
-- Compiled: converts to assembly language (depending on machine) --> binary code
+- **Compiled language**: converts to assembly language (depending on machine) --> binary code
   - +: fast
     - Overhead for the translation is incurred just once, when the source is compiled; thereafter, it need only be loaded and executed
   - -: only works on platform designed for
   - Ex.: C/C++, Go, Fortran
 
 ## Programming Paradigms
-- **Procedural**: explicit statements (variable assignment, etc.) that change program state
+- **Imperative/Procedural**: explicit statements (variable assignment, etc.) that show how computation takes place to change program state
 - **Declarative**: specifying the result you want, not how to get it
   - Ex.: SQL
 
 
-- **Imperative**: explicit (shows how computation takes place) sequence of commands that update state
 - **Logical**: specifying a set of facts and rules
 - **Functional**: type of declarative, function calls that avoid any global state
   - +: avoid shared state and side effects, potential for refactoring and optimization bc of focus on what to do
