@@ -5,6 +5,7 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#asynchronous">Asynchronous</a> •
+  <a href="#promise">Promise</a> •
   <a href="#prototypal-inheritance">Prototypal Inheritance</a> •
   <a href="#function-expression-vs-declaration">Func Expression vs Declaration</a> •
   <a href="#iife">IIFE</a> •
@@ -24,6 +25,31 @@
 
 ## Asynchronous
 - **Asynchronous**: engine runs in an event loop --> single program thread can handle concurrent operations
+- Scope challenges w asynchronous
+  ```js
+  // outputs 4 sec, 4 sec, 4 sec
+  for (var i = 1; i <= 3; i++) {
+    setTimeout(function() {
+      console.log(i + " sec");
+    }, i * 1000);
+  }
+
+  // fix: let creates new scope for i in each interaction
+  for (let i = 1; i <= 3; i++) {
+    setTimeout(function() {
+      console.log(i + " second(s) elapsed");
+    }, i * 1000);
+  }
+
+  // another fix: wrap in a closure --> creates new scope with different i each iteration
+  for (var i = 1; i <= 3; i++) {
+    (function(i) {
+      setTimeout(function() {
+        console.log(i + " second(s) elapsed");
+      }, i * 1000);
+    })(i);
+  }
+  ```
 
 ## Promise
 - **Promise**: POJO that represents the eventual completion or failure of an sync func
