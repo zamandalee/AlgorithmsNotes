@@ -11,6 +11,7 @@
   <a href="#iife">IIFE</a> •
   <a href="#strict-mode">Strict Mode</a> •
   <a href="#ecmascript-versions">ECMAScript Versions</a>
+  <a href="#angular-vs-react">Angular vs React</a>
 </p>
 
 ## Overview
@@ -271,6 +272,16 @@ ES6
 - Symbols
 - ```Array.find()```, ```Array.findIndex()``` take callbacks
 
+## Angular vs React
+Overview
+- Angular is full MVC, React is V
+- React
+  - Focus on UI rendering: diffing (only executes optimal changes by comparing DOM and virtual DOM), virtual can connect to other entities (Native, Electron)
+  - State: updating component state allows from page reactive
+- Angular
+  - Watchers: like event listeners, attached to each component, check if other modifications needed
+  - Typescript: Angular2, better code organization, typing, annotations than vanillaJS
+
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
 Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures
@@ -278,3 +289,4 @@ Strict mode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/S
 IIFE's: https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6, https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes, https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
 ES5: https://www.w3schools.com/js/js_es5.asp
 ES6: https://github.com/lukehoban/es6features
+Angular: https://github.com/rlee0525/TechnicalConceptsForInterviews/blob/master/AngularVReact.md
