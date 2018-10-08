@@ -9,10 +9,10 @@ Lecture by Ned Ruggeri. How do you deploy your application to cloud such that it
 - Difference between domain name and IP
   - House address -> **Internet Protocol address**
   - Resident name -> **domain name**
-  - phonebook in the cloud -> **Domain Name Service**
+  - Phonebook in the cloud -> **Domain Name Service**
 
 
-1. Phonebook (DNS) -> lookup address (IP) using name (domain name)
+1. Phonebook (Domain Name System DNS) -> lookup address (IP) using name (domain name)
 2. HTTP request to address
 3. Server, server hands request to application
 4. Application communicates with backend database (Postgres and mySQL have own server that accepts database requests, typically only from same machine as app)
