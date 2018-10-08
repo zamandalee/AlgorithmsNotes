@@ -55,3 +55,8 @@ Overview
 - Angular
   - Watchers: like event listeners, attached to each component, check if other modifications needed
   - Typescript: Angular2, better code organization, typing, annotations than vanillaJS
+
+## Webpack
+- Webpack: JS module bundler
+  - Everything is a module, everything is ```require```able
+  - Load what you need only when you need it: generates bundle files from modules by splitting code and loads parts of app asynchronously
