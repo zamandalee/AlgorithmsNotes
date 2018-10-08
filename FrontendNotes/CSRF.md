@@ -7,9 +7,10 @@
 - non-GET request --> expects client to upload authenticity token in params
   ```html
   <form action="pages/appacademy/like" method="post">
-<input type="hidden"
+    <input type="hidden"
        name="authenticity_token"
        value="<%= form_authenticity_token %>">
+  </form>
   ```
 - ```form_authenticity_token``` helper compares user session token with authenticity token stored in form
   - If equal, user submitting form was the one who requested it

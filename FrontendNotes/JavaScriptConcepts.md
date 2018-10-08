@@ -272,16 +272,6 @@ ES6
 - Symbols
 - ```Array.find()```, ```Array.findIndex()``` take callbacks
 
-## Angular vs React
-Overview
-- Angular is full MVC, React is V
-- React
-  - Focus on UI rendering: diffing (only executes optimal changes by comparing DOM and virtual DOM), virtual can connect to other entities (Native, Electron)
-  - State: updating component state allows from page reactive
-- Angular
-  - Watchers: like event listeners, attached to each component, check if other modifications needed
-  - Typescript: Angular2, better code organization, typing, annotations than vanillaJS
-
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
 Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures

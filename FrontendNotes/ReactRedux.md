@@ -1,9 +1,23 @@
-# JAVASCRIPT CONCEPTS
+# REACT AND REDUX NOTES
 
 ## React vs. Redux
 <img src="../Images/ReduxCyclewRails.png" width=550/>
 - Redux: yellow, the store, the single-source of truth
 - React: green
+
+## React Lifecycle Methods
+Component Mount: initially insertion into DOM
+1. ```constructor()```
+2. ```componentWillMount()```: rarely used, won't trigger re-render if state changed
+3. ```render()```
+4. ```componentDidMount()```: recommended to set state
+
+Update: props or state change
+1. ```componentWillReceiveProps(nextProps)```: React tendency to call regardless of prop change
+2. ```shouldComponentUpdate(nextProps, nextState)```: returns boolean, false --> ```componentWillUpdate()```, ```render()```, and ```componentDidUpdate()``` won't be called
+3. ```componentWillUpdate()```: won't allow set state or other re-render triggers
+4. ```render()```
+5. ```componentDidUpdate()```: called right after update, where to make network requests
 
 ## Redux Store
 - **Store**: central element of Redux's architecture w global state of an app, immutable
@@ -31,3 +45,13 @@ connect()
 - mapStateToProps: takes state as arg, returns object
   - ownProps: optional 2nd arg, passed like <parentComponent data={'data'}/>
 - mapDispatchToProps: takes dispatch, returns object containing functions
+
+## Angular vs React
+Overview
+- Angular is full MVC, React is V
+- React
+  - Focus on UI rendering: diffing (only executes optimal changes by comparing DOM and virtual DOM), virtual can connect to other entities (Native, Electron)
+  - State: updating component state allows from page reactive
+- Angular
+  - Watchers: like event listeners, attached to each component, check if other modifications needed
+  - Typescript: Angular2, better code organization, typing, annotations than vanillaJS
