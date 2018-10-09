@@ -1,9 +1,11 @@
 # Graphs
+- Graph theory: graphs are a way to formally represent a network with ordered pairs, G = (V, E) for a set of vertices and a set of edges
 - **Vertices**: dots, represent data
   - |V|: # vertices
 - **Edges**: lines, relationship between data points
   - |E|: # edges
   - Can assign **weight** and **direction** (like a vector or double arrowed): must be all un/weighted, or all have/not have direction
+- Trees are graphs with more restrictions
 
 
 - Sparcity: measured by density
