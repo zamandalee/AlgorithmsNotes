@@ -13,8 +13,32 @@ Intro
   - Twitter (unweighted directed), FB (unweighted undirected), intercity roads (weighted, by rd length, undirected), intracity roads (weighted directed, by one-way/two-way rds)
 
 Properties of Graphs
-
+- What makes a graph a simple graph? What attributes would make it not simple?
+  - **Simple graph**: w/o self loops or multi-edges
+  - **Self loop**: edge's origin and destination are the same
+    - Ex.: webpage has a link to itself
+  - **Multi-edge/parallel edge**: two edges from same origin to same desination
+    - Ex.: flight maps, 2 flights from 1 airport to the same airport
+- What is the maximum number of edges in a directed simple graph? Undirected simple graph? Answer should be in terms of N.
+  - Directed simple # edges: 0 ≤ |E| ≤ n(n - 1)
+  - Undirected simple # edges: 0 ≤ |E| ≤ (n(n - 1)) / 2
+  - **Dense** vs **sparse** graph: # edges
+    - **Adjacency matrix**: to store dense graph
+    - **Adjacency list**: to store sparse graph
+- Describe the levels of connectivity a graph can have (strongly connected, weakly connected).
+  - **Walk/path**: sequence of adjacent vertices connected w edges (in directional, edges must flow in 1 direction)
+    - <img src="../Images/path.png" width=200/>
+    - **Path/simple path**: no vertices (thus no edges) repeated, <A, B, F, H>
+    - **Trail**: no edges repeated
+    - **Strongly connected graphs**: if there is path from any vertex to any other
+      - **Connected**: strongly connected undirected
+    - **Weakly connected**: directed graph that can be connected if edges were undirected
 - What are cycles?
+  - **Closed walk**: starts and ends at same node, length > 0
+  - **Simple cycle**: no repetition except start and end
+  - **Undirected/directed cyclic graph**: no cycle
+
+Edge List
 - What are some naive ways we can store and traverse graphs? Be able to discuss time/space complexity of these approaches, and what issues we may face.
 - What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
 - What sub-constraints make up a Uniform Interface
