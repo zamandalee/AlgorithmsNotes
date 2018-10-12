@@ -39,11 +39,14 @@ Properties of Graphs
   - **Undirected/directed cyclic graph**: no cycle
 
 Edge List
-- What are some naive ways we can store and traverse graphs? Be able to discuss time/space complexity of these approaches, and what issues we may face.
-- What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
-- What sub-constraints make up a Uniform Interface
+- What are some naive ways we can store and traverse graphs? Discuss time/space complexity and associated issues.
+  - Vertex list and edge list: dynamic arrays, edges stored as objs w startVertex, endVertex, weight
+    - Space: O(|V| + |E|), time: O(|E|) to find connected nodes to given node, O(|E|) nodes connected or not
+      - Bad: O(|E|) = O(|V| * (|V| - 1)) or ~ O(|V|^2)
 
 ## Web
+- What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
+- What sub-constraints make up a Uniform Interface
 - Walk through an arbitrary example of a RESTful request/response cycle, and describe what makes it RESTful
 
 ## JavaScript
