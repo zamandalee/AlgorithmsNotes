@@ -60,3 +60,4 @@ Overview
 - Webpack: JS module bundler
   - Everything is a module, everything is ```require```able
   - Load what you need only when you need it: generates bundle files from modules by splitting code and loads parts of app asynchronously
+- Used to transform app to Electron, desktop, mobile, etc.

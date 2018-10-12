@@ -1,12 +1,19 @@
 # W1D1
 
 ## Algorithms
+Intro
 - How do we define a graph mathematically?
+  - **G = (V, E)** for an ordered pair G of a set of vertices and a set of edges
 - What is the difference between directed, undirected, weighted, and unweighted?
+  - **Directed edge**: ordered pair w origin and destination (u, v) forming an undirected graph
+  - **Undirected edge**: unordered pair {u, v} forming a digraph/directed graph
+  - **Weighted edge**: can represent priority, length, cost, any difference in the connection
+  - **Unweighted edge**: all of equal weight of 1 unit
 - Give an example of various types of graphs (Weighted Undirected, Unweighted Directed, Unweighted Undirected, etc.)
-- What makes a graph a simple graph? What attributes would make it not simple?
-- What is the maximum number of edges in a directed simple graph? Undirected simple graph? Answer should be in terms of N
-- Describe the levels of connectivity a graph can have (strongly connected, weakly connected).
+  - Twitter (unweighted directed), FB (unweighted undirected), intercity roads (weighted, by rd length, undirected), intracity roads (weighted directed, by one-way/two-way rds)
+
+Properties of Graphs
+
 - What are cycles?
 - What are some naive ways we can store and traverse graphs? Be able to discuss time/space complexity of these approaches, and what issues we may face.
 - What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
