@@ -38,12 +38,17 @@ Properties of Graphs
   - **Simple cycle**: no repetition except start and end
   - **Undirected/directed cyclic graph**: no cycle
 
-Edge List
+Graph Representation
 - What are some naive ways we can store and traverse graphs? Discuss time/space complexity and associated issues.
   - Vertex list and edge list: dynamic arrays, edges stored as objs w startVertex, endVertex, weight
-    - Space: O(|V| + |E|), time: O(|E|) to find connected nodes to given node, O(|E|) nodes connected or not
+    - Space: O(|V| + |E|)
+    - Time: O(|E|) to find adjacent nodes, O(|E|) nodes connected
       - Bad: O(|E|) = O(|V| * (|V| - 1)) or ~ O(|V|^2)
-
+  - Replace vertex list array w hash table
+  - Vertex list and adjacency matrix (2D matrix, 0 or 1 or weight of edge at idxs of nodes)
+    - Space: O(|V|^2) waste a lot of space storing 0s
+    - Time: O(|V| + |V|) find adjacent nodes by scanning vertex list to find idx then row in adj matrix at that idx, O(|V| + 1)  finding if 2 nodes connected by scanning vertex list, then keying into adj matrix there
+    
 ## Web
 - What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
 - What sub-constraints make up a Uniform Interface
