@@ -61,13 +61,26 @@ Graph Representation
 ## JavaScript
 - Give a high level overview of what an object's prototype represents
 - What are the differences between the __proto__ and prototype attributes?
-- What happens when we do or don't explicity set an object's prototype?
+- What happens when we do or don't explicitly set an object's prototype?
 - What is an object's default prototype?
 - What are the valid values for an object's prototype?
 
 ## HTML/CSS
 - Name 5 benefits of HTML5
-- What is localStorage? How might you use it?
+  1. <!DOCTYPE html>
+  2. Semantics: <header>, <footer>, <nav>, <section>, etc.
+  3. Accessbility
+  4. Audio/Video: <video src="" />
+  5. Local storage: storage across multiple windows, better security and performance, data persists after browser closed
+  6. Better interactions: <canvas>, and APIs like Drag and Drop, offline storage database, browser history management, timed media playback
 - Why are media queries useful?
+  - ```css
+    @media only screen and (max-width: 600px) {
+      body {
+        background: lightblue;
+      }
+    }
+    ```
 - What is mobile-first design? Be as specific as possible.
--
+  - Page displays faster on smaller screens
+  - ```@media only screen and (min-width: 600px)```
