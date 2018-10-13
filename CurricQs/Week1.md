@@ -48,9 +48,13 @@ Graph Representation
   - Vertex list and adjacency matrix (2D matrix, 0 or 1 or weight of edge at idxs of nodes)
     - Space: O(|V|^2) waste a lot of space storing 0s
     - Time: O(|V| + |V|) find adjacent nodes by scanning vertex list to find idx then row in adj matrix at that idx, O(|V| + 1)  finding if 2 nodes connected by scanning vertex list, then keying into adj matrix there
-    
+
 ## Web
+- REST: Representational State Transfer
 - What are the three primary Fielding constraints? (Bonus if you can say who Fielding is!)
+  1. Client-server: network made up of clients and servers
+  2. Stateless: servers and clients don't need to keep track of the other's state
+  3. Uniform interface: ensures common language between c and s to allow either to be modified wo breaking entire system
 - What sub-constraints make up a Uniform Interface
 - Walk through an arbitrary example of a RESTful request/response cycle, and describe what makes it RESTful
 
