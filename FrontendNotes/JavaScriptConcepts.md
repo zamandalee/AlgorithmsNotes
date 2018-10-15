@@ -283,6 +283,50 @@ ES6
 ## jQuery
 - jQuery: fast, lightweight JS library to simplify DOM manipulation (can do the same thing, but with more code, in vanilla JS)
 
+## Context
+- ```theFunc.apply(valueForThis, arrayOfArgs)```
+- ```theFunc.call(valueForThis, arg1, arg2, ...)```
+- ```theFunc.bind(valueForThis)(arg1, arg2, ...)``` --> returns func with modified ```this```
+
+## Attribute vs Property
+
+## Equals
+- ```==```: tries to convert one side to same type as other
+- ```===```: no conversions
+
+## Currying
+```js
+function(numArgs) {
+  const arr = [];
+  const _myCurry = num => {
+    arr.push(num);
+    if (arr.length === numArgs) {
+      return this(...arr); // do function's operations here
+      // like for (let i = 0; ...) { sum += arr[i] } for curry sum
+    }
+    return _myCurry;
+  }
+  return _myCurry;
+}
+```
+```js
+add(2, 5); // 7
+add(2)(5); // 7
+let add = function(x, ...xArgs) {
+  let total = x;
+  if (xArgs.length > 0) {
+    xArgs.forEach((el) => {
+      total += el;
+    });
+    return total;
+  } else {
+    return function(y) {
+      return total += y;
+    };
+  }
+};
+```
+
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
 Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures
