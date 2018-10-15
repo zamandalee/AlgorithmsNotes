@@ -95,6 +95,10 @@
   - Duplication by necessity: inflexible hierarchies often force duplication
   - Gorilla/banana problem: wanted a banana, but got a banana held by a gorilla in the entire jungle
 
+## Closures
+- Closure: inner func that has access to outer func's variables, globals, while maintaining own scope
+  - Outer func's variables stored as references
+
 ## Function Expression vs Declaration
 - **Function declaration**: defines a named function variable wo assignment, like sibling of variable declaration (function instead of const)
   ```js
