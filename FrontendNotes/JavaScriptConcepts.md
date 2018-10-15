@@ -7,10 +7,12 @@
   <a href="#asynchronous">Asynchronous</a> •
   <a href="#promise">Promise</a> •
   <a href="#prototypal-inheritance">Prototypal Inheritance</a> •
+  <a href="#closures">Closures</a> •
   <a href="#function-expression-vs-declaration">Func Expression vs Declaration</a> •
   <a href="#iife">IIFE</a> •
   <a href="#strict-mode">Strict Mode</a> •
   <a href="#ecmascript-versions">ECMAScript Versions</a>
+  <a href="#jquery">jQuery</a>
   <a href="#angular-vs-react">Angular vs React</a>
 </p>
 
@@ -85,9 +87,11 @@
 ## Prototypal Inheritance
 - Object has private property w link to **prototype** (another obj)
 - When accessing property of an obj, obj itself is looked at, then its prototype, all the way up **prototype chain**, until null or property found
+  - Use ```obj.hasOwnProperty('toString')``` to return boolean to check only that obj
   - ``` let f = function() { this.a = 1; this.b = 2 }```
   - ```f.prototype.b = 3``` good, ```f.prototype = {b:3,c:4}``` will break the prototype chai
   - ```f```'s prototype is Object.prototype, Object's is null
+- Changes can be seen by all objects through chain
 - JS ```class TodoListItem extends React.Component``` is syntactic sugar that builds on prototypal inheritance
 - Better than class inheritance, bc class inheritance has more flaws:
   - Tight coupling
@@ -275,6 +279,9 @@ ES6
 - Map, Set, WeakMap, WeakSet
 - Symbols
 - ```Array.find()```, ```Array.findIndex()``` take callbacks
+
+## jQuery
+- jQuery: fast, lightweight JS library to simplify DOM manipulation (can do the same thing, but with more code, in vanilla JS)
 
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
