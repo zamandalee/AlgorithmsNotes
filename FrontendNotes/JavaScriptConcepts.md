@@ -9,11 +9,15 @@
   <a href="#prototypal-inheritance">Prototypal Inheritance</a> •
   <a href="#closures">Closures</a> •
   <a href="#function-expression-vs-declaration">Func Expression vs Declaration</a> •
+  <a href="#pure-functions">Pure Functions</a> •
   <a href="#iife">IIFE</a> •
   <a href="#strict-mode">Strict Mode</a> •
   <a href="#ecmascript-versions">ECMAScript Versions</a>
   <a href="#jquery">jQuery</a>
-  <a href="#angular-vs-react">Angular vs React</a>
+  <a href="#context">Context</a>
+  <a href="#attribute-vs-property">Attribute vs Property</a> •
+  <a href="#equals">Equals</a>
+  <a href="#currying">Currying</a>
 </p>
 
 ## Overview
@@ -289,6 +293,10 @@ ES6
 - ```theFunc.bind(valueForThis)(arg1, arg2, ...)``` --> returns func with modified ```this```
 
 ## Attribute vs Property
+- **Attribute**: defined by HTML
+- **Property**: defined by DOM, on JS DOM objects
+  - jQuery: ```$('#someEl').prop('className')```
+  - Interact w this instead of attributes when possible
 
 ## Equals
 - ```==```: tries to convert one side to same type as other
