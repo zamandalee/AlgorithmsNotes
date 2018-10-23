@@ -30,11 +30,21 @@ Methods
     end
   end
 end```
+- Singleton method: method given to a single object, often used for buttons of a GUI
 - Method access control
   - Public method: no access control
   - Protected: access w/i family, invoked by obj of defining class and subclasses
   - Private: receive must be self, only called in context of current obj
-- Singleton method: 
+- Method lookup path: singleton --> extended module --> prepended module --> class itself --> included module --> super class
+  - If multiple extended, included, or prepended modules, the last definition comes first
+
+# Proc vs. Lambda
+- Proc
+  - Ex.: ```p = Proc.new {|a, b| puts a + b }``` ```p.call 1``` --> NoMethodError
+- Lambda: creates proc that checks number of args
+  - Ex.: ```l = lambda {|a, b| puts a + b }``` ```l.call 1``` --> ArgumentError
+- Control flow keywords difference
+  - Return in a Proc returns from its enclosing block/method as well as Proc, return in a lambda returns only from lambda
 
 ## Gems
 - Code organization
