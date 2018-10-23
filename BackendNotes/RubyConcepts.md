@@ -38,7 +38,7 @@ end```
 - Method lookup path: singleton --> extended module --> prepended module --> class itself --> included module --> super class
   - If multiple extended, included, or prepended modules, the last definition comes first
 
-# Proc vs. Lambda
+## Proc vs. Lambda
 - Proc
   - Ex.: ```p = Proc.new {|a, b| puts a + b }``` ```p.call 1``` --> NoMethodError
 - Lambda: creates proc that checks number of args
@@ -58,7 +58,8 @@ end```
 
 - Cool gems
   - ```better_errors```: inspect source code live through a console
-  - ```pry-rails```
+  - ```faker```: fake data within models
+  - ```capybara```: testing framework
 
 ## Callbacks
 - Callback: method called at certain moment of object's life cycle
@@ -68,3 +69,7 @@ end```
   - ```before_validation```: handy as a last chance to set forgotten fields
   - ```after_create```: handy to do post-create logic, like send a confirmation email
   - ```after_destroy```: handy to perform post-destroy clean-up logic
+
+## Rack
+- Rack: interface between framework (Rails) and web server, sits between every request and response
+- Rack middleware: can be used to log, sessions, cache, surity
