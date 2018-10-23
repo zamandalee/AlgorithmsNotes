@@ -21,7 +21,20 @@ Inheritance
   - Object of class ```Class```, assigned to a global constant (the name of the assignment)
 - Module: similar to classes, but can't be instantiated (classes all about objects)
 
-
+Methods
+- Class method: ```class Foo   def self.bar ... end end```, for anything that doesn't deal with individual instance
+  - Ex.: ```module ActiveRecord
+  class Base
+    def self.validates_presence_of(...)
+      # make sure present
+    end
+  end
+end```
+- Method access control
+  - Public method: no access control
+  - Protected: access w/i family, invoked by obj of defining class and subclasses
+  - Private: receive must be self, only called in context of current obj
+- Singleton method: 
 
 ## Gems
 - Code organization
