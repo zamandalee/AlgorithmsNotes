@@ -14,6 +14,15 @@
 - TDD highly-supported
 - Mature, huge community
 
+## OOP
+Inheritance
+- BasicObject --> Object --> Module --> Class
+- Class: blueprint from which objects can be created
+  - Object of class ```Class```, assigned to a global constant (the name of the assignment)
+- Module: similar to classes, but can't be instantiated (classes all about objects)
+
+
+
 ## Gems
 - Code organization
   - Code and tests
