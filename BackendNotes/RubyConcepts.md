@@ -72,7 +72,7 @@ end```
 
 ## Rack
 - Rack: interface between framework (Rails) and web server, sits between every request and response
-- Rack middleware: can be used to log, sessions, cache, surity
+- Rack middleware: can be used to log, sessions, cache, security
 
 ## ActiveJob
 - Active Job: framework for declaring jobs and making them run on a variety of queueing backends

@@ -25,7 +25,7 @@
 - **Prototype-based**: style of OOP, classes not explicitly defined, instead objects are reused
 - **Multi-paradigm**
   - **Imperative/procedural programming** (explicit statements that change program state), **OOP**, **functional programming** (functions to avoid global state)
-- **Weakly typed**:
+- **Dynamically typed**: a type is associated with each value, rather than just with each expression. In fact, JavaScript supports various ways to test the type of an object, including duck typing
 - **Lexical scope**: scope is defined by author-time decisions of where functions are declared
   - **Lexing phase**: during compilation, know the where and how of declarations, able to predict how they'll be looked up during execution
 
