@@ -14,6 +14,18 @@
 - TDD highly-supported
 - Mature, huge community
 
+## CRUD and RESTful routes
+- Create is ```POST```, read is ```GET```, update is ```PATCH```, delete is ```DELETE```
+|   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |
+|----------|----------------|-----------------|--------------------------------------|
+| Index    | /blog          |      GET        | Displays all blog post               |
+| New      | /blog/new      |      GET        | Shows new form for new blog entry    |
+| Create   | /blog          |      POST       | Creates new blog post              |
+| Show     | /blog/:id      |      GET        | Shows specific blog post        |
+| Edit     | /blog/:id/edit |      GET        | Shows edit form for specific blog post    |
+| Update   | /blog/:id      |      PUT        | Updates specific blog post       |
+| Destroy  | /blog/:id      |      DELETE     | Deletes specific blog post       |
+
 ## OOP
 Inheritance
 - BasicObject --> Object --> Module --> Class
@@ -63,6 +75,7 @@ Variables
   - ```better_errors```: inspect source code live through a console
   - ```faker```: fake data within models
   - ```capybara```: testing framework
+
 
 ## Callbacks
 - **Callback**: method called at certain moment of object's life cycle
