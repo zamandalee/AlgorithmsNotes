@@ -83,3 +83,12 @@ Variables
 
 ## ActiveRecord
 - Object Relational Mapper, so you don't have to manually call database yourself (no SQL needed)
+
+## Asset Pipeline
+- **Asset pipeline**: framework to compress JS and CSS assets
+  - Implemented by default by sprockets-rails gem
+  - Features
+    1. Concats assets (all JS into master .js file, same w css) --> reduce requests made by browser
+    2. Compresses assets (remove comments and whitespace from css)
+    3. Allows assets via higher-level language w preocmpilation down to actual assets
+      - Ex.: Sass for CSS, CoffeeScript for JS, etc.
