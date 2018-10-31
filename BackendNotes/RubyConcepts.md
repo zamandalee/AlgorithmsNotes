@@ -76,6 +76,21 @@ Variables
   - ```faker```: fake data within models
   - ```capybara```: testing framework
 
+## RSpec
+```rb
+require 'fileName'
+
+RSpec.describe ClassName do
+  describe "#initialize" do
+    it "assigns the sloth a name" do
+        sloth = Sloth.new("Jimmy")
+        expect(sloth.name).to eq("Jimmy")
+    end
+
+    it "declares ..."
+  end
+end
+```
 
 ## Callbacks
 - **Callback**: method called at certain moment of object's life cycle
