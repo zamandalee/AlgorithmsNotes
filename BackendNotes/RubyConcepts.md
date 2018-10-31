@@ -82,8 +82,11 @@ require 'fileName'
 
 RSpec.describe ClassName do
   describe "#initialize" do
+    # sloth = Sloth.new("Jimmy")
+    subject(:sloth) (Sloth.new("Jimmy"))
+
+    # each it block has own scope
     it "assigns the sloth a name" do
-        sloth = Sloth.new("Jimmy")
         expect(sloth.name).to eq("Jimmy")
     end
 
@@ -91,6 +94,7 @@ RSpec.describe ClassName do
   end
 end
 ```
+- Writing own RSpec: ```#describe(str, blk)```
 
 ## Callbacks
 - **Callback**: method called at certain moment of object's life cycle
