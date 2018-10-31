@@ -2,8 +2,8 @@
 
 
 ## Ruby vs. Rails
-- Ruby: OOP interpreted programming language dev by Yukihiro Matsumoto
-- Rails: web-application framework written with Ruby
+- **Ruby**: OOP interpreted programming language dev by Yukihiro Matsumoto
+- **Rails**: web-application framework written with Ruby
   - Set of tools and abstractions that makes writing web applications easier
   - Helps write MVC web applications
     - Separation of logic: functions relating to data access (model, Active Record), rendering data to the user (view, Action View), and business logic (controller, Action Controller)
@@ -17,12 +17,12 @@
 ## OOP
 Inheritance
 - BasicObject --> Object --> Module --> Class
-- Class: blueprint from which objects can be created
+- **Class**: blueprint from which objects can be created
   - Object of class ```Class```, assigned to a global constant (the name of the assignment)
-- Module: similar to classes, but can't be instantiated (classes all about objects)
+- **Module**: similar to classes, but can't be instantiated (classes all about objects)
 
 Methods
-- Class method: ```class Foo   def self.bar ... end end```, for anything that doesn't deal with individual instance
+- **Class method**: ```class Foo   def self.bar ... end end```, for anything that doesn't deal with individual instance
   - Ex.: ```module ActiveRecord
   class Base
     def self.validates_presence_of(...)
@@ -30,18 +30,21 @@ Methods
     end
   end
 end```
-- Singleton method: method given to a single object, often used for buttons of a GUI
+- **Singleton method**: method given to a single object, often used for buttons of a GUI
 - Method access control
-  - Public method: no access control
-  - Protected: access w/i family, invoked by obj of defining class and subclasses
-  - Private: receive must be self, only called in context of current obj
+  - **Public method**: no access control
+  - **Protected**: access w/i family, invoked by obj of defining class and subclasses
+  - **Private**: receive must be self, only called in context of current obj
 - Method lookup path: singleton --> extended module --> prepended module --> class itself --> included module --> super class
   - If multiple extended, included, or prepended modules, the last definition comes first
 
+Variables
+- Class variables: one copy shared by all objs of that class
+
 ## Proc vs. Lambda
-- Proc
+- **Proc**
   - Ex.: ```p = Proc.new {|a, b| puts a + b }``` ```p.call 1``` --> NoMethodError
-- Lambda: creates proc that checks number of args
+- **Lambda**: creates proc that checks number of args
   - Ex.: ```l = lambda {|a, b| puts a + b }``` ```l.call 1``` --> ArgumentError
 - Control flow keywords difference
   - Return in a Proc returns from its enclosing block/method as well as Proc, return in a lambda returns only from lambda
@@ -62,7 +65,7 @@ end```
   - ```capybara```: testing framework
 
 ## Callbacks
-- Callback: method called at certain moment of object's life cycle
+- **Callback**: method called at certain moment of object's life cycle
 - Relational callbacks
   - ```dependent: :destroy```: on has_many, user's posts should be destroyed if the user is destroyed (else posts are widowed)
 - Registered callbacks
@@ -71,11 +74,11 @@ end```
   - ```after_destroy```: handy to perform post-destroy clean-up logic
 
 ## Rack
-- Rack: interface between framework (Rails) and web server, sits between every request and response
+- **Rack**: interface between framework (Rails) and web server, sits between every request and response
 - Rack middleware: can be used to log, sessions, cache, security
 
 ## ActiveJob
-- Active Job: framework for declaring jobs and making them run on a variety of queueing backends
+- **Active Job**: framework for declaring jobs and making them run on a variety of queueing backends
   - Jobs should be small units of work that run in parallel: regularly scheduled clean-ups, billing charges, mailings
 
 ## ActiveRecord
