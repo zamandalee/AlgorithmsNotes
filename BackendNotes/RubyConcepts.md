@@ -16,6 +16,7 @@
 
 ## CRUD and RESTful routes
 - Create is ```POST```, read is ```GET```, update is ```PATCH```, delete is ```DELETE```
+
 |   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |
 |----------|----------------|-----------------|--------------------------------------|
 | Index    | /blog          |      GET        | Displays all blog post               |
@@ -29,19 +30,22 @@
 ## OOP
 Inheritance
 - BasicObject --> Object --> Module --> Class
-- **Class**: blueprint from which objects can be created
+- **Class**: blueprint from which objects can be created, holds data & has methods that interact w data & used to instantiate objects
   - Object of class ```Class```, assigned to a global constant (the name of the assignment)
 - **Module**: similar to classes, but can't be instantiated (classes all about objects)
 
 Methods
 - **Class method**: ```class Foo   def self.bar ... end end```, for anything that doesn't deal with individual instance
-  - Ex.: ```module ActiveRecord
-  class Base
-    def self.validates_presence_of(...)
-      # make sure present
+  - Ex.:
+    ```rb
+    module ActiveRecord
+      class Base
+        def self.validates_presence_of(...)
+          # make sure present
+        end
+      end
     end
-  end
-end```
+    ```
 - **Singleton method**: method given to a single object, often used for buttons of a GUI
 - Method access control
   - **Public method**: no access control
@@ -92,6 +96,13 @@ RSpec.describe ClassName do
 
     it "declares ..."
   end
+
+  describe "#eat" do
+    it "adds food to foods array" do
+      sloth.eat("pickle")
+      expect(sloth.foods).to include("pickle")
+    end
+  end
 end
 ```
 - Writing own RSpec: ```#describe(str, blk)```
@@ -122,5 +133,5 @@ end
   - Features
     1. Concats assets (all JS into master .js file, same w css) --> reduce requests made by browser
     2. Compresses assets (remove comments and whitespace from css)
-    3. Allows assets via higher-level language w preocmpilation down to actual assets
+    3. Allows assets via higher-level language w precompilation down to actual assets
       - Ex.: Sass for CSS, CoffeeScript for JS, etc.

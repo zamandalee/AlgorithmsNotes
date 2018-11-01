@@ -19,6 +19,9 @@ Update: props or state change
 4. ```render()```
 5. ```componentDidUpdate()```: called right after update, where to make network requests
 
+Unmount
+1. ```componentWillUnmount()```: called right before unmounted and destroyed, where do cleanup (invalidate timers, cancel network requests, etc.)
+
 ## Redux Store
 - **Store**: central element of Redux's architecture w global state of an app, immutable
   - It 1. updates app's state via reducer 2. broadcasts state to an application's view layer via subscription 3. listens for actions that tell it how and when to change the global state
