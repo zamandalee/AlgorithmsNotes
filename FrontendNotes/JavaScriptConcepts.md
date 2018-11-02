@@ -255,6 +255,7 @@ ES6
   - Old pre-ES6 ```var```: globally/function scoped (defined outside func, globally), can be updated and re-declared, hoisted and initialized as ```undefined```,
 
 - Arrow function syntax: () => ..., retains external ```this``` inside block
+  - Doesn't have own ```this```, ```arguments```, ```super```, or ```new.target```
 
 - Promises: library for async,
   ```js
