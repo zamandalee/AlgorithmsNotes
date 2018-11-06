@@ -346,6 +346,7 @@ let add = function(x, ...xArgs) {
 - ```instanceof```: works on level of prototype, doesn't work on primitives, returns boolean
   - Ex.: ```'xyz' instanceof String``` => ```true```
 
+
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
 Lexical scope: https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures
