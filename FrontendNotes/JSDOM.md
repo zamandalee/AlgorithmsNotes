@@ -8,3 +8,6 @@
 - **HTMLCollection**: returned by ```getElementsByClassName()``` and ```getElementsByTagName()```, doesn't have ```forEach```
   - ```Array.from()``` to convert into array --> traversable w ```forEach```
 - **NodeList**: returned by ```querySelectorAll()```, traversable w ```forEach```
+
+## Mouse Events
+- click, mousedown, mouseup, mouseenter, mouseleave, mouseover, mousemove

@@ -346,6 +346,8 @@ let add = function(x, ...xArgs) {
 - ```instanceof```: works on level of prototype, doesn't work on primitives, returns boolean
   - Ex.: ```'xyz' instanceof String``` => ```true```
 
+## Object
+- Object.values, Object.prototype(obj), Object.freeze(func) to prevent changes, Object.seal(func) to prevent new property addition or deletion but allows modification
 
 ## Sources:
 Promises: https://developers.google.com/web/fundamentals/primers/promises
